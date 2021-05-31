@@ -3,13 +3,15 @@ import React, {Component} from 'react'
 class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-                <div class="container">
-                    <h1 style={{color: "white"}}>ZK-Lottery</h1>
-                </div>
-                
-                
-            </nav>
+            <div>
+                <nav class="navbar  navbar-dark bg-dark fixed-top"
+                    style={{paddingBottom: '20px'}}>
+                    <div class="container-fluid">
+                        <h1 class="text-white" style={{margin: '10px'}}>Zk-Lottery</h1>
+                    </div>
+                </nav>
+            </div>
+            
         )
     }
 }
