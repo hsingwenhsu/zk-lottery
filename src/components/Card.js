@@ -35,7 +35,7 @@ class Card extends Component {
         return (
             <div>
                 <center>
-                <button onClick={this.flipCard} type="button" class="btn btn-link"><img src={icon} width="150"></img></button>
+                <button onClick={this.flipCard} type="button" class="btn btn-link"><img src={icon} width="180"></img></button>
                 </center>
             </div>
         )
