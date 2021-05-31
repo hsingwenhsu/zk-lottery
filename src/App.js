@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css';
 import Web3 from 'web3';
+import Navbar from './components/Navbar'
 //import {TODO_LIST_ABI, TODO_LIST_ADDRESS} from './config'
 class App extends Component {
   componentWillMount(){
@@ -24,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <Navbar />
         <h1>Hello world!</h1>
         <p>Your account: {this.state.account}</p>
       </div>
