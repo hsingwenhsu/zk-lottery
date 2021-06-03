@@ -7,6 +7,7 @@ class Deck extends Component {
             <div class="container" style={{paddingTop: '170px'}}>
                 <div class="row">
                     <div class="col-sm">
+<<<<<<< HEAD
                     <Card flipCard={this.props.flipCard} id={this.props.cards[0].id} flipstate={this.props.cards[0].flipstate}/>
                     </div>
                     <div class="col-sm">
@@ -20,10 +21,26 @@ class Deck extends Component {
                     </div>
                     <div class="col-sm">
                     <Card flipCard={this.props.flipCard} id={this.props.cards[4].id} flipstate={this.props.cards[4].flipstate}/>
+=======
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
+<<<<<<< HEAD
                     <Card flipCard={this.props.flipCard} id={this.props.cards[5].id} flipstate={this.props.cards[5].flipstate}/>
                     </div>
                     <div class="col-sm">
@@ -37,6 +54,21 @@ class Deck extends Component {
                     </div>
                     <div class="col-sm">
                     <Card flipCard={this.props.flipCard} id={this.props.cards[9].id} flipstate={this.props.cards[9].flipstate}/>
+=======
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+                    </div>
+                    <div class="col-sm">
+                    <Card flipCard={this.props.flipCard}/>
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
                     </div>
                 </div>
                 

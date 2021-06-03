@@ -5,8 +5,12 @@ class Card extends Component {
         super(props);
         this.flipCard = this.flipCard.bind(this);
         this.state = {
+<<<<<<< HEAD
             id: this.props.id,
             flipstate: this.props.flipstate
+=======
+            flipstate: 0
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
         }
     }
     flipCard(){

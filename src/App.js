@@ -4,6 +4,7 @@ import Web3 from 'web3';
 import Navbar from './components/Navbar'
 import Deck from './components/Deck'
 import Zk from './components/Zk'
+<<<<<<< HEAD
 const {spawn} = require('child_process');
 const {exec} = require('child_process');
 //import {TODO_LIST_ABI, TODO_LIST_ADDRESS} from './config'
@@ -18,6 +19,12 @@ class App extends Component {
     this.loadBlockchainData()
     this.callAPI()
       
+=======
+//import {TODO_LIST_ABI, TODO_LIST_ADDRESS} from './config'
+class App extends Component {
+  componentWillMount(){
+    this.loadBlockchainData()
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
   }
 
   async loadBlockchainData (){
@@ -29,6 +36,7 @@ class App extends Component {
     // const todoList = new web3.eth.Contract(TODO_LIST_ABI, TODO_LIST_ADDRESS)
     // this.setState({todoList})
     this.flipCard = this.flipCard.bind(this);
+<<<<<<< HEAD
     //this.callAPI = this.callAPI.bind(this);
     //compile the 
   }
@@ -57,12 +65,24 @@ class App extends Component {
   flipCard(cardid) {
     console.log('click')
     //should spawn the process of creating proof here
+=======
+  }
+  constructor(props){
+    super(props)
+    this.state = {account:''}
+  }
+
+  //Functions
+  flipCard() {
+    console.log('click')
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
   }
 
   render() {
     return (
       <div className="container text-center">
         <Navbar />
+<<<<<<< HEAD
         <Deck flipCard={this.flipCard} cards={this.state.cards} />
         <Zk />
         <button type="button" class="btn btn-secondary btn-lg" >
@@ -70,6 +90,12 @@ class App extends Component {
         </button>
 
         <p>{this.state.apiResponse}</p>
+=======
+        <Deck flipCard={this.flipCard}/>
+        <Zk />
+  
+        
+>>>>>>> f52f2c49026db967149260575d739984cdc89e3f
       </div>
     )
   }
