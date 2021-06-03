@@ -1,0 +1,26 @@
+{
+  "inputs": [
+    {
+      "name": "preimage",
+      "public": false,
+      "type": "u32"
+    },
+    {
+      "name": "bitNum",
+      "public": true,
+      "type": "u32"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    },
+    {
+      "type": "bool"
+    }
+  ]
+}
