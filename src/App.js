@@ -34,6 +34,7 @@ class App extends Component {
   }
   constructor(props){
     super(props)
+    this.callAPI = this.callAPI.bind(this);
     this.state = {
       account:'',
       cards: cards,
@@ -50,10 +51,11 @@ class App extends Component {
   
 
   callAPI() {
-    fetch("http://localhost:9000/zokrates_server/secret/28")
+    fetch("http://localhost:9000/zokrates_server/secret/")
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }))
         .catch(err => err);
+    console.log(this);
     console.log(this.state.apiResponse);
     console.log('call api')
   }
@@ -92,8 +94,35 @@ class App extends Component {
 
   //function for verify
   handleVerify(cardid){
-    console.log('handle verify');
+    fetch("http://localhost:9000/zokrates_server/verify/"+cardid)
+        .then(res => res.text())
+        .then(res => Swal.fire(res))
+        .catch(err => err);
     console.log(cardid);
+  }
+
+  compile(){
+    fetch("http://localhost:9000/zokrates_server/compile")
+        .then(res => res.text())
+        .then(res => Swal.fire(res))
+        .catch(err => err);
+    console.log('compiled');
+  }
+
+  generateKey(){
+    fetch("http://localhost:9000/zokrates_server/generateKey")
+        .then(res => res.text())
+        .then(res => Swal.fire(res))
+        .catch(err => err);
+    console.log('compiled');
+  }
+
+  test(){
+    fetch("http://localhost:9000/zokrates_server/compile")
+        .then(res => res.text())
+        .then(res => console.log(res))
+        .catch(err => err);
+    console.log('test');
   }
 
   render() {
@@ -104,6 +133,14 @@ class App extends Component {
   
         <button onClick = {this.startLottery} type="button" class="btn btn-secondary btn-lg" >
             <h2>Start Lottery</h2>
+        </button>
+
+        <button onClick = {this.compile} type="button" class="btn btn-secondary btn-lg" >
+            <h2>compile</h2>
+        </button>
+
+        <button onClick = {this.generateKey} type="button" class="btn btn-secondary btn-lg" >
+            <h2>GenerateKey</h2>
         </button>
 
         <p>{this.state.apiResponse}</p>

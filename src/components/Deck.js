@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Card from './Card'
 
 class Deck extends Component {
+
     render() {
         return (
             <div class="container" style={{paddingTop: '170px'}}>
@@ -49,7 +50,6 @@ class Deck extends Component {
                     
                     </div>
                 </div>
-                
             </div>
         )
     }
