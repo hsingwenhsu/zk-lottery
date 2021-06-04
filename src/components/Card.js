@@ -44,8 +44,11 @@ class Card extends Component {
             <div>
                 <center>
                 <button onClick={this.flipCard} type="button" class="btn btn-link"><img src={icon} width="180"></img></button>
+                <button onClick={this.handleVerify} type="button" class="btn btn-secondary btn-lg btn-block" style={{marginTop:'10px', width: '180px'}}>
+                   <h3 h3 style={{marginTop:'5px'}}>Verify</h3>
+                </button>
                 </center>
-                <button onClick={this.handleVerify} type="button" class="btn btn-secondary btn-lg btn-block" ><h3>Verify</h3></button>
+                
             </div>
         )
     }

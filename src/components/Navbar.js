@@ -7,7 +7,7 @@ class Navbar extends Component {
                 <nav class="navbar  navbar-dark bg-dark fixed-top"
                     style={{paddingBottom: '20px'}}>
                     <div class="container-fluid">
-                        <h1 class="text-white" style={{margin: '10px'}}>Zk-Lottery</h1>
+                        <h1 class="text-white" style={{margin: '10px', marginLeft: '30px'}}>ZK-Lottery</h1>
                     </div>
                 </nav>
             </div>

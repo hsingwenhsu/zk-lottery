@@ -127,23 +127,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container text-center">
+      <div className="container container-fluid" style={{margin:'0px'}}>
         <Navbar />
+        <div class="sidebar" style={{marginTop: '90px', paddingTop:'10px'}}>
+          <center>
+           
+            
+            <button onClick = {this.compile} type="button" class="btn btn-secondary btn-block sidebar_but" style={{marginTop: '30px'}} >
+                <h3 style={{marginTop:'5px'}}>1. Compile</h3>
+            </button>
+            <button onClick = {this.generateKey} type="button" class="btn btn-secondary sidebar_but" style={{marginTop: '30px'}}>
+                <h3 style={{marginTop:'5px'}}>2. Generate Key</h3>
+            </button>
+            <button onClick = {this.startLottery} type="button" class="btn btn-secondary sidebar_but" style={{marginTop: '30px'}}>
+                <h3 style={{marginTop:'5px'}}>3. Start Lottery!</h3>
+            </button>
+
+         
+          </center>
+       
+        
+        
+        </div>
         <Deck flipCard={this.flipCard} handleVerify={this.handleVerify} cards={this.state.cards} initState={this.state.init}/>
-  
-        <button onClick = {this.startLottery} type="button" class="btn btn-secondary btn-lg" >
-            <h2>Start Lottery</h2>
-        </button>
-
-        <button onClick = {this.compile} type="button" class="btn btn-secondary btn-lg" >
-            <h2>compile</h2>
-        </button>
-
-        <button onClick = {this.generateKey} type="button" class="btn btn-secondary btn-lg" >
-            <h2>GenerateKey</h2>
-        </button>
-
-        <p>{this.state.apiResponse}</p>
       </div>
     )
   }

@@ -5,7 +5,7 @@ class Deck extends Component {
 
     render() {
         return (
-            <div class="container" style={{paddingTop: '170px'}}>
+            <div class="container" style={{paddingTop: '170px', marginLeft:'470px'}}>
                 <div class="row" style={{paddingBottom:'50px'}}>
                     <div class="col-sm">
                     <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[0]} initState={this.props.initState}/>
