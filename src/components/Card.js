@@ -5,12 +5,8 @@ class Card extends Component {
         super(props);
         this.flipCard = this.flipCard.bind(this);
         this.state = {
-<<<<<<< HEAD
             id: this.props.id,
             flipstate: this.props.flipstate
-=======
-            flipstate: 0
->>>>>>> f52f2c49026db967149260575d739984cdc89e3f
         }
     }
     flipCard(){
@@ -19,7 +15,7 @@ class Card extends Component {
             var newstate = Math.floor(Math.random() *2)+1;
             console.log('flipstate', newstate)
             this.setState({flipstate: newstate})
-            this.props.flipCard();
+            this.props.flipCard(this.state.id, this);
         }else{
             console.log('flip state==0')
             this.setState({flipstate: 0})

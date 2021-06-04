@@ -4,7 +4,6 @@ import Web3 from 'web3';
 import Navbar from './components/Navbar'
 import Deck from './components/Deck'
 import Zk from './components/Zk'
-<<<<<<< HEAD
 const {spawn} = require('child_process');
 const {exec} = require('child_process');
 //import {TODO_LIST_ABI, TODO_LIST_ADDRESS} from './config'
@@ -19,12 +18,6 @@ class App extends Component {
     this.loadBlockchainData()
     this.callAPI()
       
-=======
-//import {TODO_LIST_ABI, TODO_LIST_ADDRESS} from './config'
-class App extends Component {
-  componentWillMount(){
-    this.loadBlockchainData()
->>>>>>> f52f2c49026db967149260575d739984cdc89e3f
   }
 
   async loadBlockchainData (){
@@ -36,12 +29,11 @@ class App extends Component {
     // const todoList = new web3.eth.Contract(TODO_LIST_ABI, TODO_LIST_ADDRESS)
     // this.setState({todoList})
     this.flipCard = this.flipCard.bind(this);
-<<<<<<< HEAD
-    //this.callAPI = this.callAPI.bind(this);
     //compile the 
   }
   constructor(props){
     super(props)
+    this.callAPI = this.callAPI.bind(this);
     this.state = {
       account:'',
       cards: cards,
@@ -53,49 +45,38 @@ class App extends Component {
   
 
   callAPI() {
-    fetch("http://localhost:9000/zokrate_server")
+    fetch("http://localhost:9000/zokrate_server/secret/14", {
+      // method: "POST",
+      // body: JSON.stringify({data: "123"}),
+    })
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }))
         .catch(err => err);
+    console.log(this);
     console.log(this.state.apiResponse);
     console.log('call api')
   }
 
   //Functions
-  flipCard(cardid) {
+  flipCard(cardid, card) {
     console.log('click')
+    console.log(this);
+    console.log(cardid);
+    console.log(card)
     //should spawn the process of creating proof here
-=======
-  }
-  constructor(props){
-    super(props)
-    this.state = {account:''}
-  }
-
-  //Functions
-  flipCard() {
-    console.log('click')
->>>>>>> f52f2c49026db967149260575d739984cdc89e3f
   }
 
   render() {
     return (
       <div className="container text-center">
         <Navbar />
-<<<<<<< HEAD
         <Deck flipCard={this.flipCard} cards={this.state.cards} />
         <Zk />
-        <button type="button" class="btn btn-secondary btn-lg" >
+        <button type="button" class="btn btn-secondary btn-lg" onClick={this.callAPI}>
             <h2>Test secret</h2>
         </button>
 
         <p>{this.state.apiResponse}</p>
-=======
-        <Deck flipCard={this.flipCard}/>
-        <Zk />
-  
-        
->>>>>>> f52f2c49026db967149260575d739984cdc89e3f
       </div>
     )
   }

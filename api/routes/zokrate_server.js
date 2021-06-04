@@ -18,5 +18,16 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.get('/secret/', function(req, res){
+    exec('cat secret.txt', (error, stdout, stderr)=>{
+        res.send(stdout);
+    })
+});
+
+router.get('/secret/:id', function(req, res){
+    var id = req.params.id;
+    console.log(id);
+    res.send(id);
+});
 
 module.exports = router;
