@@ -6,38 +6,48 @@ class Deck extends Component {
     render() {
         return (
             <div class="container" style={{paddingTop: '170px'}}>
-                <div class="row">
+                <div class="row" style={{paddingBottom:'50px'}}>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[0].id} flipstate={this.props.cards[0].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[0]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[1].id} flipstate={this.props.cards[1].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[1]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[2].id} flipstate={this.props.cards[2].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[2]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[3].id} flipstate={this.props.cards[3].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[3]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[4].id} flipstate={this.props.cards[4].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[4]} initState={this.props.initState}/>
+                    
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style={{paddingBottom:'50px'}}>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[5].id} flipstate={this.props.cards[5].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[5]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[6].id} flipstate={this.props.cards[6].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[6]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[7].id} flipstate={this.props.cards[7].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[7]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[8].id} flipstate={this.props.cards[8].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[8]} initState={this.props.initState}/>
+                    
                     </div>
                     <div class="col-sm">
-                    <Card flipCard={this.props.flipCard} id={this.props.cards[9].id} flipstate={this.props.cards[9].flipstate}/>
+                    <Card flipCard={this.props.flipCard} handleVerify={this.props.handleVerify} card={this.props.cards[9]} initState={this.props.initState}/>
+                    
                     </div>
                 </div>
             </div>
