@@ -25,9 +25,9 @@ cd api
 npm run start
 ```
 ### Component
-* **Compile** bottom: compiling the reveal_bit.zok
-* **Generate Key** bottom: generating proof key and verification key
-* **Start Lottery** bottom: sent the secret to the front-end and initialize the status of the cards
+* **Compile** bottom: compile the reveal_bit.zok
+* **Generate Key** bottom: generate proof key and verification key
+* **Start Lottery** bottom: send the secret to the front-end and initialize the status of the cards
 * **Cards**: the lottery item, reveal with head or tail when clicking
 * **verify** bottom: generate the proof and verify with verification key
 
